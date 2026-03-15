@@ -24,7 +24,7 @@ const createCards=arr=>{
     postArr=arr;
     let result=""
     for(let i=arr.length-1;i>=0;i--){
-        result+=`<div class="col-md-4 mb-4" id="${arr[i].id}">
+        result+=`<div class="col-12 col-md-4 mb-4" id="${arr[i].id}">
       <div class="card h-100">
         <div class="card-header">
           <h3>${arr[i].title} ${arr[i].id}</h3>
@@ -90,7 +90,7 @@ function onpostsubmit(eve){
 }
 function createsinglecards(obj){
 let col=document.createElement("div");
-col.className="col-md-4 mb-4";
+col.className="col-12 col-md-4 mb-4";
 col.id=obj.id;
 col.innerHTML=`<div class="card h-100">
         <div class="card-header">
