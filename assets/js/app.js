@@ -10,6 +10,9 @@ const addbtn=document.getElementById("addbtn");
 const BASE_URL =`https://jsonplaceholder.typicode.com`;
 const POST_URL=`${BASE_URL}/posts`;
 
+function togglespinner() {
+    spinner.classList.toggle('d-none')
+}
 
 
 function snackbar(msg,icon){
@@ -123,7 +126,8 @@ function patchdatainform(postobj){
     addbtn.classList.add("d-none");
     updatebtn.classList.remove("d-none");
 
-    postform.scrollIntoView({
+    window.scrollTo({
+        top: 0,
         behavior: "smooth"
     });
 
