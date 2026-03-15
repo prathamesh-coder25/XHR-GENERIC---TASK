@@ -152,8 +152,11 @@ function updatePostCards(obj){
 let col=document.getElementById(obj.id);
 col.querySelector(".card-header h3").innerText=obj.title;
 col.querySelector(".card-body p").innerText=obj.body;
-updatebtn.classList.add("d-none");
+updatebtn.classList.add("d-none")
 addbtn.classList.remove("d-none")
+
+togglespinner()
+snackbar(`The post with id ${obj.id} is Updated successfully..`, 'success')
 
 }
 
