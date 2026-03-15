@@ -163,7 +163,7 @@ snackbar(`The post with id ${obj.id} is Updated successfully..`, 'success')
 function onremove(eve){
 let remove_id=eve.closest(".col-md-4").id;
 
-let getconfirm=confirm(`do you want to remove these post with id ${remove_id}`);
+let getconfirm=confirm(`Are you sure do you want to delete this post ${remove_id}`);
 if(getconfirm){
 localStorage.setItem("remove_id",remove_id)
 let remove_url=`${BASE_URL}/posts/${remove_id}`;
